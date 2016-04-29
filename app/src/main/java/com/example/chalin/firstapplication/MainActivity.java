@@ -18,6 +18,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1000 && resultCode == 1001)
+        {
+            EditText editText = (EditText) findViewById(R.id.edit_message);
+            String message = data.getStringExtra("editText") + data.getStringExtra("editText2");
+            editText.setText(message);
+        }
     }
 
     public void sendMessage(View view) {
@@ -29,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         Bundle bundle = new Bundle();
         bundle.putInt("age", 25);
         intent.putExtra("bundle", bundle);
-        startActivity(intent);
+//        startActivity(intent);
+        startActivityForResult(intent, 1000);
     }
 }

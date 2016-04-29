@@ -37,8 +37,17 @@ public class DisplayMessageActivity extends AppCompatActivity {
     }
 
     public void calculate(View view) {
+        Intent intent = new Intent();
+
         editText = (EditText) findViewById(R.id.editText);
         editText2 = (EditText) findViewById(R.id.editText2);
         editText3 = (EditText) findViewById(R.id.editText3);
+
+        intent.putExtra("editText", editText.getText().toString().trim());
+        intent.putExtra("editText2", editText2.getText().toString().trim());
+        intent.putExtra("editText3", editText3.getText().toString().trim());
+
+        setResult(1001, intent);
+        finish();
     }
 }
