@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">第一个应用</string>
+
+    <!-- Strings related to login -->
+    <string name="edit_message">请输入信息</string>
+    <string name="button_send">发送</string>
+    <string name="action_settings">设置</string>
+    <string name="title_activity_display_message">我的消息</string>
+</resources>
