@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == 1000 && resultCode == 1001)
         {
             EditText editText = (EditText) findViewById(R.id.edit_message);
-            String message = data.getStringExtra("editText") + data.getStringExtra("editText2");
+            String message = data.getStringExtra("editText") + data.getStringExtra("editText2") + data.getStringExtra("editText3");
             editText.setText(message);
         }
     }

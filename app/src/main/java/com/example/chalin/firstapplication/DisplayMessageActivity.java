@@ -23,7 +23,7 @@ public class DisplayMessageActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         String message = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
-        TextView textView = new TextView(this);
+        TextView textView = (TextView) findViewById(R.id.message);
         textView.setTextSize(40);
 
         String name = intent.getStringExtra("name");
@@ -32,8 +32,10 @@ public class DisplayMessageActivity extends AppCompatActivity {
 
         textView.setText(message + "--" + name + "(" + age + ")");
 
-        RelativeLayout layout = (RelativeLayout) findViewById(R.id.content);
-        layout.addView(textView);
+//        TextView textView = new TextView(this);
+//        textView.setText(message + "--" + name + "(" + age + ")");
+//        RelativeLayout layout = (RelativeLayout) findViewById(R.id.content);
+//        layout.addView(textView);
     }
 
     public void calculate(View view) {
